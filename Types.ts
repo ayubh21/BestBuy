@@ -1,16 +1,13 @@
-export interface Products{
+export interface Item{
   currentPage: number
   total: number
   totalPages: number
   pageSize: number
   products: Product[]
-  paths: Path[]
-  facets: Facet[]
   lastSearchDate: string
   relatedQueries: any
   sscs: any
   relatedCategories: any
-  selectedFacets: SelectedFacet[]
   resources: any
   redirectUrl: any
   promotions: any
@@ -63,44 +60,3 @@ export interface Product {
   hasFrenchContent: boolean
   categoryIds: string[]
 }
-
-export interface Path {
-  name: string
-  value: string
-  selectPath: string
-  unselectPath: string
-  type: string
-}
-
-export interface Facet {
-  name: string
-  systemName: string
-  count: number
-  filters: Filter[]
-  isMultiSelect: boolean
-  order: number
-}
-
-export interface Filter {
-  name: string
-  path: string
-  count: number
-  isSelected: boolean
-}
-
-export interface SelectedFacet {
-  name: string
-  systemName: string
-  count: number
-  filters: Filter2[]
-  isMultiSelect: boolean
-  order: number
-}
-
-export interface Filter2 {
-  name: string
-  path: string
-  count: number
-  isSelected: boolean
-}
-
